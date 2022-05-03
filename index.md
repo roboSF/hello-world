@@ -1,37 +1,66 @@
-## Welcome to GitHub Pages
+# Overdue Notifications in Mobile Application
 
-You can use the [editor on GitHub](https://github.com/roboSF/hello-world/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+---
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- [Overdue Notifications in Mobile Application](#overdue-notifications-in-mobile-application)
+  - [Description](#description)
+  - [PSW Maintenance](#psw-maintenance)
+    - [Transmission Text](#transmission-text)
+      - [Actions](#actions)
+      - [Elapsed Days](#elapsed-days)
+      - [Task Scheduler](#task-scheduler)
+      - [Data Import](#data-import)
+    - [Opened with Combo](#opened-with-combo)
+    - [Opened with Selection Tool](#opened-with-selection-tool)
 
-### Markdown
+## Description
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+From version 6.5 onward `Overdue Notifications` content will be removed from `Data Dictionary` and merged with  `Transmission Text` feature.
 
-```markdown
-Syntax highlighted code block
+`Overdue Notification` will be sent as single push and/or email notification (grouped by `Transaction Type` or `Document Type` if selected)
 
-# Header 1
-## Header 2
-### Header 3
+## PSW Maintenance
 
-- Bulleted
-- List
+### Transmission Text
 
-1. Numbered
-2. List
+There is new set of items in `Actions` combo selection:
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+#### Actions
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+- for overdue timesheets:
 
-### Jekyll Themes
+  - Overdue Timesheet for Authorisation
+  - Overdue Timesheet
+  - Overdue Timesheet (Proxy)
+  - Overdue TImesheet for Confirmation
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/roboSF/hello-world/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- for overdue forms:
 
-### Support or Contact
+  - Overdue Form In Progress
+  - Overdue Form In Progress (Proxy)
+  - Overdue Form for Authorisation
+  - Overdue Form for Review
+  - Overdue Form for Confirmation
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+#### Elapsed Days
+
+There is a new textbox `Elapsed Days` which can contain any value in range 0 - 365, representing number of days elapsed before overdue notificiation is sent.
+
+#### Task Scheduler
+
+Items/checkboxes in `Task Scheduler` `Notification` task remain unchanged.
+
+These checkboxes will trigger new items from `Actions` list in `Transmission Text`
+
+#### Data Import
+
+PSW Runtime Parameters groups are opened using following controls:
+
+### Opened with Combo
+
+- __Inquiry Profiles__
+  - Accounting Period
+  - Current Approval Status
+
+### Opened with Selection Tool
